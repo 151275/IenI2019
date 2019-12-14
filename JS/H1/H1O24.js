@@ -41,7 +41,7 @@ function draw() {
   
   xJager = constrain(xJager,0,width - 100);
   yJager = constrain(yJager,0,height - 100);
-  xProoi = constrain(xProoi,0,widht - 75);
+  xProoi = constrain(xProoi,0,width - 75);
   yProoi = constrain(yProoi,0,height - 50);
 
   if (xJager >= xProoi-100 && xJager <= xProoi + 75 && yJager >= yProoi - 100 && yJager <= yProoi + 50) {
