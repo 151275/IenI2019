@@ -1,22 +1,18 @@
 var diameter=0;
 
 function setup() {
-  canvas = createCanvas(450,450);
+  canvas = createCanvas(600,600);
   background('silver');
   canvas.parent('processing');
   //noLoop();
 }
 
 function draw() {
-  strokeWeight(1);
-  stroke(51);
-  ellipse(width/2,height/2,diameter);
-  diameter=constrain(diameter,0,450);
-  diameter++;
-  if (diameter > 200) {
-      fill('pink');
+  for(var m=0;m<=4;m++){
+    for(var n=0;n<=4;n++){
+            TekenCirkel(50,50,100,'violet');
+            translate(100,0);
   }
-  else {
-    fill('deepskyblue');
+  translate(-600,100)
   }
 }
