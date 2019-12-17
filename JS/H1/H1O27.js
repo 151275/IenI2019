@@ -19,19 +19,18 @@ function draw() {
   push();
   translate(0.5*breedte,150);
 
-  for (var n = 0; n <=1000/aantal;n++) {
-    tekenJos(2);
+  for (var n = 0; n < aantal;n++) {
+    tekenJos(2 + n / 2);
     translate(breedte,0);
   }
-  
   pop();
   
-  if (keyIsDown(RIGHT_ARROW)) {
-    aantal++;
-  }   
-  if (keyIsDown(LEFT_ARROW)) {
+  if (keyIsDown(LEFT_ARROW) && aantal >= 2) {
       aantal--;
   }
+  if (keyIsDown(RIGHT_ARROW)) {
+      aantal++;
+  }   
 }
 
 function tekenJos(s) {
