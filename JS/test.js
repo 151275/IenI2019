@@ -1,18 +1,21 @@
-var diameter=0;
+var choco ;
+var toren ;
 
 function setup() {
-  canvas = createCanvas(600,600);
+  canvas = createCanvas(450,450);
   background('silver');
   canvas.parent('processing');
   //noLoop();
 }
 
-function draw() {
-  for(var m=0;m<=4;m++){
-    for(var n=0;n<=4;n++){
-            TekenCirkel(50,50,100,'violet');
-            translate(100,0);
-  }
-  translate(-600,100)
-  }
+function preload() {
+    choco = loadImage("image/choco.jpg");
+    toren = loadImage("image/toren.jpg");
 }
+
+function draw() {
+  background(choco);
+  torenX += random(-5,5);
+  torenY += random(-5,5);
+  image(toren,torenX,torenY);
+  }
