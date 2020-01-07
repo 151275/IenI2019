@@ -13,11 +13,11 @@ function setup() {
 
 function draw() {
   tekenAchtergrond();
-
+    for (var n=0;n < 6;n++){
   
-    tekenHuis(kleur,13);
+    tekenHuis(kleur,huisNummers[n],huisEigenaren[n]);
     translate(150,0);
-
+    }
 }
 
 function tekenHuis(kleur,nr) {
